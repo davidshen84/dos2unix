@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/davidshen84/dos2unix/compare/v1.1.0...v1.1.1) (2025-08-04)
+
+
+### Bug Fixes
+
+* action path ([24a187f](https://github.com/davidshen84/dos2unix/commit/24a187fc31b911d3163b8e7d3cde5b20328d8196))
+
 ## [1.1.0](https://github.com/davidshen84/dos2unix/compare/v1.0.0...v1.1.0) (2025-08-04)
 
 
