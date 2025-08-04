@@ -29,12 +29,12 @@ jobs:
         run: |
           git config user.name '${{ github.actor }}'
           git config user.email '${{ github.actor }}[bot]@users.noreply.github.com'
-          git tag -d v${{ steps.release.outputs.major }} || true
-          git tag -d v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
-          git push origin :v${{ steps.release.outputs.major }} || true
-          git push origin :v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} || true
+          git tag -d v${{ steps.release.outputs['dockerfile--major'] }} || true
+          git tag -d v${{ steps.release.outputs['dockerfile--major'] }}.${{ steps.release.outputs['dockerfile--minor'] }} || true
+          git push origin :v${{ steps.release.outputs['dockerfile--major'] }} || true
+          git push origin :v${{ steps.release.outputs['dockerfile--major'] }}.${{ steps.release.outputs['dockerfile--minor'] }} || true
 
-          git tag -a v${{ steps.release.outputs.major }} -m "Release v${{ steps.release.outputs.major }}"
-          git tag -a v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }} -m "Release v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
-          git push origin v${{ steps.release.outputs.major }}
-          git push origin v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}
+          git tag -a v${{ steps.release.outputs['dockerfile--major'] }} -m "Release v${{ steps.release.outputs['dockerfile--major'] }}"
+          git tag -a v${{ steps.release.outputs['dockerfile--major'] }}.${{ steps.release.outputs['dockerfile--minor'] }} -m "Release v${{ steps.release.outputs['dockerfile--major'] }}.${{ steps.release.outputs['dockerfile--minor'] }}"
+          git push origin v${{ steps.release.outputs['dockerfile--major'] }}
+          git push origin v${{ steps.release.outputs['dockerfile--major'] }}.${{ steps.release.outputs['dockerfile--minor'] }}
