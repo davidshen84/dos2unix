@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/davidshen84/dos2unix/compare/v2.0.0...v2.1.0) (2025-08-04)
+
+
+### Features
+
+* add ignore file ([8aa831f](https://github.com/davidshen84/dos2unix/commit/8aa831f41a52baa14730a6aee9fab1375c07774b))
+
 ## [2.0.0](https://github.com/davidshen84/dos2unix/compare/v1.0.0...v2.0.0) (2025-08-04)
 
 
