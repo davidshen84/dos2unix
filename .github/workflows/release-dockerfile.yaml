@@ -20,10 +20,12 @@ jobs:
         with:
           token: ${{ github.token }}
           release-type: simple
+          path: dockerfile
+          include-component-in-tag: true
       - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
-      - if: ${{ steps.release.outputs.release_created }}
+      - if: ${{ steps.release.outputs['dockerfile--release_created'] }}
         run: |
           git config user.name '${{ github.actor }}'
           git config user.email '${{ github.actor }}[bot]@users.noreply.github.com'
