@@ -1,16 +1,16 @@
-# Use the official Alpine Linux as a parent image
+# USE THE OFFICIAL ALPINE LINUX AS A PARENT IMAGE
 FROM alpine
 
-# Set the maintainer label for the image
+# SET THE MAINTAINER LABEL FOR THE IMAGE
 LABEL maintainer="David Shen <davidshen84@gmail.com>"
 
-# Install dos2unix and git packages
+# INSTALL DOS2UNIX AND GIT PACKAGES
 RUN apk add --no-cache \
     dos2unix \
     git
 
-# Set the working directory to /data
+# SET THE WORKING DIRECTORY TO /DATA
 WORKDIR /data
 
-# The command to run when the container starts. This command finds all modified files in the git repository and runs dos2unix on them.
+# THE COMMAND TO RUN WHEN THE CONTAINER STARTS. THIS COMMAND FINDS ALL MODIFIED FILES IN THE GIT REPOSITORY AND RUNS DOS2UNIX ON THEM.
 CMD ["/bin/sh", "-c", "git status --porcelain | sed -s 's/\(. *\)\(.*\) -> \(.*\)/\1\3/' | cut -c4- | xargs dos2unix"]
