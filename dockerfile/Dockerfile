@@ -1,5 +1,5 @@
 FROM alpine
-LABEL maintainer="Xi Shen <davidshen84@gmail.com>"
+LABEL maintainer="David Shen <davidshen84@gmail.com>"
 
 RUN apk add --no-cache \
     dos2unix \
