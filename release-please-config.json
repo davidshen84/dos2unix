@@ -1,6 +1,7 @@
 {
   "packages": {
     "dockerfile": {
+      "component": "container",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple",
       "bump-minor-pre-major": false,
