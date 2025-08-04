@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 
 jobs:
@@ -16,5 +17,6 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v4
         with:
+          token: ${{ github.token }}
           release-type: simple
 
