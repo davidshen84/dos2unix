@@ -21,7 +21,6 @@ jobs:
           token: ${{ github.token }}
           release-type: simple
           path: dockerfile
-          include-component-in-tag: true
       - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
